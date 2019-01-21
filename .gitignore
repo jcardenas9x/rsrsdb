@@ -76,5 +76,5 @@ typings/
 .fusebox/
 
 # Gatsby cache, build
-.cache
-public
+.cache/
+public/

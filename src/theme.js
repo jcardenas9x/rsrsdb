@@ -82,4 +82,19 @@ const fonts = {
     },
 }
 
-export { colors, media, fonts };
+const linkStyle = {
+    backgroundColor: hex2rgba(colors.timberwolf, 0.3),
+    borderBottom: `1px solid ${hex2rgba(colors.umber, 0.2)}`,
+    color: colors.lfbeige,
+
+    ':hover': {
+        backgroundColor: colors.timberwolf,
+        borderBottomColor: colors.lfbeige
+    }
+};
+
+const globalStyles = {
+    link: linkStyle,
+} 
+
+export { colors, media, fonts, globalStyles };

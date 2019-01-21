@@ -69,7 +69,7 @@ class Home extends Component {
                                                 fontSize: 30,
                                             },
                                         }}>
-                                        RomancingSaGa Re:univerSe database
+                                        RomancingSaGa Re:univerSe Database
                                     </p>
                                 </Wrapper>
                             </div>
@@ -87,22 +87,7 @@ class Home extends Component {
                                     paddingTop: 60,
                                 }
                             }}>
-                            <div
-                                css={{
-                                    width: '33%',
-                                    marginLeft: 15,
-                                    marginRight: 15,
-                                }}>
-                                Section 1...
-                            </div>
-                            <div
-                                css={{
-                                    width: '67%',
-                                    marginLeft: 15,
-                                    marginRight: 15,
-                                }}>
-                                Section 2...
-                            </div>
+                            
                         </Flex>
                     </Wrapper>
                 </div>
