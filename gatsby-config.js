@@ -5,6 +5,19 @@ module.exports = {
         title: "RSRSDB"
     },
     plugins: [
+        `gatsby-transformer-json`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                
+            }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./data/`
+            }
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-glamor`,
         {
