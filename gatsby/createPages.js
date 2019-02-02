@@ -1,6 +1,7 @@
 'use strict';
 
 const { resolve } = require('path');
+const fs = require('fs');
 
 module.exports = exports.createPages = async ({graphql, actions}) => {
     const { createPage } = actions;
@@ -122,7 +123,7 @@ module.exports = exports.createPages = async ({graphql, actions}) => {
 
         createPage({
             path: slug,
-            template: styleTemplate,
+            component: styleTemplate,
             context: {
                 slug
             }

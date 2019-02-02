@@ -7,15 +7,12 @@ module.exports = {
     plugins: [
         `gatsby-transformer-json`,
         {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                
-            }
+            resolve: `gatsby-transformer-remark`
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `./data/`
+                path: `${__dirname}/data`
             }
         },
         `gatsby-plugin-react-helmet`,

@@ -3,18 +3,24 @@ import { graphql } from 'gatsby';
 import Layout from 'src/components/Layout';
 import StylePage from 'src/components/StylePage';
 
-const Style = ({data}) => {
-    <Layout>
+export default ({data: {
+    styleJson,
+    allStylebonusJson,
+}}) => {
+    let styleBonusList = (allStylebonusJson) ? allStylebonusJson.edges : [];
+    return (
+      <Layout>
         <StylePage
-            styleJson={data.styleJson}
-            styleBonus={data.allStylebonusJson}
-            skillList={JSON.parse(data.styleJson.fields.skillList)}
+            styleJson={styleJson}
+            styleBonus={styleBonusList}
+            skillList={JSON.parse(styleJson.fields.skillList)}
             />
-    </Layout>
+      </Layout>
+    );
 }
 
 export const styleQuery = graphql`
-    query StyleJsonPage($slug: String!) {
+    query($slug: String!) {
         styleJson (fields: { slug: { eq: $slug } }) {
             objId
             charId
@@ -71,5 +77,3 @@ export const styleQuery = graphql`
       }
     }
 `;
-
-export default Style;
