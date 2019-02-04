@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { media, colors } from 'src/theme';
+import { colors } from 'src/theme';
 
 import Wrapper from 'src/components/Wrapper';
 
-const Footer = ({layoutHasSidebar}) => (
+const Footer = () => (
     <Footer
         css={{
             backgroundColor: colors.umber,

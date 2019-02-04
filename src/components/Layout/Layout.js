@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 import { media } from 'src/theme';
 import Flex from 'src/components/Flex';
 import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
 
 class Layout extends Component {
     render () {
         const {children, location} = this.props;
-
-        let layoutHasSidebar = false;
 
         return (
             <div

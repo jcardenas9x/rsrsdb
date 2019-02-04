@@ -31,6 +31,14 @@ const StylePage = ({
             }}> 
             <div css={{width: '100%'}}>
                 <Wrapper>
+                    <div
+                        css={{
+                            width: "100%",
+                            padding: 20,
+                            margin: 20
+                        }}>
+                        
+                    </div>
                     <StyleDataBlock styleData={styleJson} />
                     <SkillListBlock skillList={skillList} />
                     {
@@ -234,6 +242,7 @@ const SkillListBlock = ({
                                         case 6: text = "Electric "; break;
                                         case 7: text = "Sun "; break;
                                         case 8: text = "Shadow "; break;
+                                        default: text = "?"; break;
                                     }
                                     return text;
                                 })}</td>
@@ -270,6 +279,8 @@ const AbilityTable = ({styleBonus}) => {
                                         <td>{abil.flavorText}</td>
                                     </tr>
                                 )
+                            } else {
+                                return null;
                             }
                         })
                     }

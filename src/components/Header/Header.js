@@ -81,6 +81,9 @@ const Header = ({location}) => (
                         RSRSdb
                     </span>
                 </Link>
+                <nav>
+                    <HeaderLink to="/style" title="Styles" />
+                </nav>
             </div>
         </Wrapper>
     </header>

@@ -83,9 +83,9 @@ const fonts = {
 }
 
 const linkStyle = {
-    backgroundColor: hex2rgba(colors.timberwolf, 0.3),
-    borderBottom: `1px solid ${hex2rgba(colors.umber, 0.2)}`,
-    color: colors.lfbeige,
+    backgroundColor: hex2rgba(colors.timberwolf, 0.7),
+    borderBottom: `1px solid ${hex2rgba(colors.umber, 0.5)}`,
+    color: colors.black,
 
     ':hover': {
         backgroundColor: colors.timberwolf,

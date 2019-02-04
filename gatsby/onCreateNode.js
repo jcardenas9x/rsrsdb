@@ -3,6 +3,8 @@
 const abilities = require('../data/ability').slice();
 const skills = require('../data/skill').slice();
 
+const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)\.md$/;
+
 const fetchAbility = (abilityId, catalog) => {
     let ability = catalog.find(abil => abil["objId"] === abilityId);
     return ability;
@@ -62,6 +64,23 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
     let clone = Object.assign({}, node);
 
     switch(node.internal.type) {
+        case 'MarkdownRemark':
+            const { permalink, title, author } = node.frontmatter;
+            const { relativePath } = getNode(node.parent);
+
+            let slugX = permalink;
+
+            if (!slugX) {
+                slugX = `/${relativePath.replace('.md','.html')}`;
+            }
+
+            createNodeField({
+                node,
+                name: "slug",
+                value: slugX
+            });
+
+            break;
         case 'AbilityJson':
             break;
         case 'CharacterJson':
